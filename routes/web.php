@@ -14,7 +14,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 // Trang Admin
 Route::get('/admin', function () {
-    return 'Chào mừng Admin!';
+    return view('admin');
 })->middleware('auth');
 
 // Trang Dashboard

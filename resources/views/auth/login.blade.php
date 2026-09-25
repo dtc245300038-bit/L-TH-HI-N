@@ -102,6 +102,11 @@
         </div>
     @endif
 
+    @if (request()->query('session_expired'))
+    <div style="color: #b45309; margin-bottom: 15px;">
+        Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.
+    </div>
+    @endif
     <form method="POST" action="/login">
         @csrf
 
